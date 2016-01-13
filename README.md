@@ -40,14 +40,34 @@ This is a great module to configure your SSH server config file.
 
 ## Usage
 
-1. Using default template
+
+1. Default config
 
  ~~~
-  class {'::ssh::sshd_config':
-    port => 22,
-    permitrootlogin => 'yes',
-  }
+ class { '::ssh::sshd_config': }
  ~~~
+
+2. Permit root login and allow some users
+
+ ~~~
+ class { '::ssh::sshd_config': 
+   permitrootlogin   => 'yes'
+   allow_users       => 'root admin1'
+ }
+ ~~~
+
+3. Ensure Local User, block root login
+
+ ~~~
+ class { '::ssh::sshd_config': 
+   user_local_enable => 'yes',
+   user_local_ensure => 'sysadmin',
+   user_password     => '$6$GpTlgkVr$CHLWoyzd4fGD/c4eG2A5JnR8HvsrUF0sGnHrpumysSsJRW5laOfMrvuYX3qjlLriQXGQVHqLq8UIpOxe9Wz2C1', # admin@123
+   permitrootlogin   => 'no'
+   allow_users       => 'admin1 admin2 admin3'
+ }
+ ~~~
+
 
 ## Limitations
 

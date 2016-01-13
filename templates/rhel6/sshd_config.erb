@@ -46,6 +46,12 @@ SyslogFacility AUTHPRIV
 <% if @permitrootlogin -%>
 PermitRootLogin <%= @permitrootlogin %>
 <% end -%>
+
+# AllowUsers
+<% if @allow_users_apply -%>
+AllowUsers <%= @allow_users_apply %>
+<% end -%>
+
 #StrictModes yes
 #MaxAuthTries 6
 #MaxSessions 10

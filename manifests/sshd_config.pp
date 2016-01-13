@@ -53,6 +53,9 @@ class ssh::sshd_config (
 ) inherits ::ssh::params {
 
   include '::ssh::service'
+  
+  # LOCAL
+  $allow_users_apply = undef
 
   # Check local user
   if $user_local_enable == 'yes' {
