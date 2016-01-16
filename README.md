@@ -52,7 +52,7 @@ This is a great module to configure your SSH server config file.
  ~~~
  class { '::ssh::sshd_config': 
    permitrootlogin   => 'yes'
-   allow_users       => 'root admin1'
+   allow_users       => 'root vagrant admin1'
  }
  ~~~
 
@@ -64,7 +64,7 @@ This is a great module to configure your SSH server config file.
    user_local_ensure => 'sysadmin',
    user_password     => '$6$GpTlgkVr$CHLWoyzd4fGD/c4eG2A5JnR8HvsrUF0sGnHrpumysSsJRW5laOfMrvuYX3qjlLriQXGQVHqLq8UIpOxe9Wz2C1', # admin@123
    permitrootlogin   => 'no'
-   allow_users       => 'admin1 admin2 admin3'
+   allow_users       => 'vagrant admin1 admin2 admin3'
  }
  ~~~
 

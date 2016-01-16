@@ -1,9 +1,10 @@
+#
 # Class: ssh::service
 #
 class ssh::service (
   $service_name    = $::ssh::params::service_name,
-  $service_restart = $::ssh::params::service_restart,
-) inherits ::ssh::params {
+  $service_restart = $::ssh::params::service_restart
+) inherits ssh {
 
   # We're going to assume the package is already there.
   # This is also because things get complicated when there
