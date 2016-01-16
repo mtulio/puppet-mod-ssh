@@ -43,22 +43,22 @@ This is a great module to configure your SSH server config file.
 
 1. Default config
 
- ~~~
+```
  class { '::ssh::sshd_config': }
- ~~~
+```
 
 2. Permit root login and allow some users
 
- ~~~
+```
  class { '::ssh::sshd_config': 
    permitrootlogin   => 'yes'
    allow_users       => 'root vagrant admin1'
  }
- ~~~
+```
 
 3. Ensure Local User, block root login
 
- ~~~
+```
  class { '::ssh::sshd_config': 
    user_local_enable => 'yes',
    user_local_ensure => 'sysadmin',
@@ -66,7 +66,7 @@ This is a great module to configure your SSH server config file.
    permitrootlogin   => 'no'
    allow_users       => 'vagrant admin1 admin2 admin3'
  }
- ~~~
+```
 
 
 ## Limitations
