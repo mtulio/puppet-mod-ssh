@@ -1,4 +1,4 @@
-# Linux
+# ssh
 
 #### Table of Contents
 
@@ -72,7 +72,7 @@ This is a great module to configure your SSH server config file.
 ## Limitations
 
 OS compatibility [tested]: 
-* Red Hat family 7+ 
+* Red Hat family 6Server and 7Server
 
 We're working to support more OS.
 
@@ -81,6 +81,9 @@ We're working to support more OS.
 See project page at https://github.com/mtulio/puppet-mod-ssh
 
 ## Release Notes
+
+[1.0.1] 
+* Review document description
 
 [1.0.0]
 * Manage sshd_config
