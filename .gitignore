@@ -1,2 +1,2 @@
 # Ignore build packages
-pkgs/
+pkg/
