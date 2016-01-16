@@ -2,20 +2,35 @@
   "name": "mtulio-ssh",
   "version": "1.0.0",
   "author": "mtulio",
-  "summary": "Module to manage SSH server",
+  "summary": "Module to manage SSH server and their config file.",
   "license": "Apache 2.0",
   "source": "https://github.com/mtulio/puppet-mod-ssh",
   "project_page": "https://github.com/mtulio/puppet-mod-ssh",
   "issues_url": "https://github.com/mtulio/puppet-mod-ssh/issues",
-  "tags": ["linux", "ssh", "sshd", "openssh"],
-  "operatingsystem_support": [
+  "tags": ["linux", "ssh", "sshd", "openssh", "sshd_conf"],
+  "requirements": [
     {
-      "operatingsystem":"RedHat-based",
-      "operatingsystemrelease": [
-      	"7+"
-      ]            
+      "name": "puppet",
+      "version_requirement": ">= 3.0.0 < 5.0.0"
     }
   ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    }
+  ],
+  "description": "Manages SSH server, config file sshd_config",
   "dependencies": [
     {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
   ]
