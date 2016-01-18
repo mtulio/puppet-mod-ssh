@@ -8,6 +8,7 @@
   "project_page": "https://github.com/mtulio/puppet-mod-ssh",
   "issues_url": "https://github.com/mtulio/puppet-mod-ssh/issues",
   "tags": ["linux", "ssh", "sshd", "openssh", "sshd_conf"],
+  "description": "Manages SSH server, config file sshd_config",
   "requirements": [
     {
       "name": "puppet",
@@ -30,9 +31,7 @@
       ]
     }
   ],
-  "description": "Manages SSH server, config file sshd_config",
   "dependencies": [
     {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
   ]
 }
-
