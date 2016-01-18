@@ -9,7 +9,6 @@
     * [Setup requirements](#setup-requirements)
     * [Beginning](#beginning)
 4. [Usage](#usage)
-5. [Reference](#reference)
 5. [Limitations](#limitations)
 6. [Development](#development)
 
@@ -32,7 +31,7 @@ Module to manage SSH server config file.
 
 ### Setup Requirements 
 
-* none
+* puppet module install mtulio-ssh
 
 ### Beginning 
 
@@ -81,6 +80,20 @@ We're working to support more OS.
 See project page at https://github.com/mtulio/puppet-mod-ssh
 
 ## Release Notes
+
+[1.1.0]
+* Changing global parameter of sshd_config template:
+>> from: 
+GSSAPIAuthentication yes
+GSSAPICleanupCredentials no
+```
+```
+>> to:
+```
+GSSAPIAuthentication no
+GSSAPICleanupCredentials yes
+
+```
 
 [1.0.1] 
 * Review document description

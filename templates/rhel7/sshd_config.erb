@@ -103,8 +103,12 @@ ChallengeResponseAuthentication no
 #KerberosUseKuserok yes
 
 # GSSAPI options
-GSSAPIAuthentication yes
-GSSAPICleanupCredentials no
+
+#GSSAPIAuthentication yes
+GSSAPIAuthentication no
+#GSSAPICleanupCredentials no
+GSSAPICleanupCredentials yes
+
 #GSSAPIStrictAcceptorCheck yes
 #GSSAPIKeyExchange no
 #GSSAPIEnablek5users no
