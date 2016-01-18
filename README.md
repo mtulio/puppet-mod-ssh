@@ -2,26 +2,27 @@
 
 #### Table of Contents
 
-1. [Overview](#overview)
-2. [Module Description](#module-description)
-3. [Setup](#setup)
+1. [Overview](#1-overview)
+2. [Module Description](#2-module-description)
+3. [Setup](#3-setup)
     * [What module affects](#what-module-affects)
     * [Setup requirements](#setup-requirements)
     * [Beginning](#beginning)
-4. [Usage](#usage)
-5. [Limitations](#limitations)
-6. [Development](#development)
+4. [Usage](#4-usage)
+5. [Limitations](#5-limitations)
+6. [Development](#6-development)
+6. [Release Notes](#7-release-notes)
 
-## Overview
+## 1. Overview
 
 This module can install and configure SSH server config file [ and in the future manages the client ]
 
-## Module Description
+## 2. Module Description
 
 Module to manage SSH server config file.
 
 
-## Setup
+## 3. Setup
 
  See [Usage](#usage)
 
@@ -37,7 +38,7 @@ Module to manage SSH server config file.
 
 This is a great module to configure your SSH server config file. 
 
-## Usage
+## 4. Usage
 
 
 1. Default config
@@ -68,18 +69,18 @@ This is a great module to configure your SSH server config file.
 ```
 
 
-## Limitations
+## 5. Limitations
 
 OS compatibility [tested]: 
 * Red Hat family 6Server and 7Server
 
 We're working to support more OS.
 
-## Development
+## 6. Development
 
 See project page at https://github.com/mtulio/puppet-mod-ssh
 
-## Release Notes
+## 7. Release Notes
 
 [1.1.0]
 * Changing global parameter of sshd_config template:
