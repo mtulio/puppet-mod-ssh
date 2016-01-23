@@ -11,7 +11,7 @@
 4. [Usage](#4-usage)
 5. [Limitations](#5-limitations)
 6. [Development](#6-development)
-6. [Release Notes](#7-release-notes)
+7. [Release Notes](#7-release-notes)
 
 ## 1. Overview
 
@@ -24,7 +24,7 @@ Module to manage SSH server config file.
 
 ## 3. Setup
 
- See [Usage](#usage)
+ See [Usage](#4-usage)
 
 ### What module affects
 
