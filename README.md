@@ -100,7 +100,10 @@ See project page at https://github.com/mtulio/puppet-mod-ssh
 
 ## 7. Release Notes
 
-[1.2.0] <--
+[1.2.1]
+* Fix metadata dependences
+
+[1.2.0]
 * Add 'banner' support to template config file - sshd_conf
 
 [1.1.0]
