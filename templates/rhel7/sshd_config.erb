@@ -167,10 +167,11 @@ UseDNS <%= @usedns %>
 #ChrootDirectory none
 #VersionAddendum none
 
-# no default banner path
 <% if @bannerpath -%>
+# Banner path
 Banner <%= @bannerpath %>
 <% else -%>
+# no default banner path
 #Banner none
 <% end -%>
 
