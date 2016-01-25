@@ -86,7 +86,6 @@ class { '::ssh::sshd_config':
 }
 ```
 
-
 ## 5. Limitations
 
 OS compatibility [tested]: 
@@ -100,10 +99,10 @@ See project page at https://github.com/mtulio/puppet-mod-ssh
 
 ## 7. Release Notes
 
-[1.3.0]
+[1.3.0] [1.3.1]
 * Add Allow/Deny users and groups
 
-[1.2.1] <--
+[1.2.1] 
 * Fix metadata dependences
 
 [1.2.0]
@@ -111,16 +110,18 @@ See project page at https://github.com/mtulio/puppet-mod-ssh
 
 [1.1.0]
 * Changing global parameter of sshd_config template:
+
 >> from: 
+```
 GSSAPIAuthentication yes
 GSSAPICleanupCredentials no
 ```
 ```
+
 >> to:
 ```
 GSSAPIAuthentication no
 GSSAPICleanupCredentials yes
-
 ```
 
 [1.0.1] 
