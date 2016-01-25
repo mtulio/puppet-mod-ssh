@@ -72,10 +72,12 @@ class ssh::sshd_config (
     $allow_users_arr = $allow_users
   }
 
-  if $deny_users   { $deny_users_arr   = $deny_users }
-  if $deny_groups  { $deny_groups_arr  = $deny_groups }
-  if $allow_groups { $allow_groups_arr = $allow_groups_users }
+  if $deny_users   != undef { $deny_users_arr   = $deny_users }
+  if $deny_groups  != undef { $deny_groups_arr  = $deny_groups }
+  if $allow_groups != undef { $allow_groups_arr = $allow_groups }
 
+  notice("1dusers[$deny_users_arr] dgr[$deny_groups_arr] agrp[$allow_groups_arr] ausr[$allow_users_arr]")
+  notice("2dusers[$deny_users] dgr[$deny_groups] agrp[$allow_groups] ausr[$allow_users]")
 
   # Create config file
   file { '/etc/ssh/sshd_config':
