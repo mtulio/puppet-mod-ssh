@@ -38,7 +38,10 @@ class ssh::sshd_config (
   $bannerpath                      = undef,
   $match                           = undef,
   $internalsftp                    = false,
+  $deny_users                      = undef,
   $allow_users                     = undef,
+  $deny_groups                     = undef,
+  $allow_groups                    = undef,
 
   ## SERVICE PARAMETERS ###
   $template_dir                    = $template_dir,
@@ -47,16 +50,13 @@ class ssh::sshd_config (
 
   include '::ssh::service'
   
-  # LOCAL
-  #$allow_users_apply = undef
-
   # Check local user
   if $user_local_enable == 'yes' {
     if $user_name_ensure == undef or $user_password == undef {
       fail('#ERROR ssh::sshd_config> When [user_local_enable] is enabled, you must set [user_name_ensure] and [user_password].')
     }
     else {
-      $allow_users_apply = "${user_name_ensure} ${allow_users}"
+      $allow_users_arr = "${user_name_ensure} ${allow_users}"
 
       # Create user 
       user { $user_name_ensure :
@@ -69,9 +69,15 @@ class ssh::sshd_config (
     }
   }
   else { # Set allow_users
-    $allow_users_apply = $allow_users
+    $allow_users_arr = $allow_users
   }
 
+  if $deny_users   { $deny_users_arr   = $deny_users }
+  if $deny_groups  { $deny_groups_arr  = $deny_groups }
+  if $allow_groups { $allow_groups_arr = $allow_groups_users }
+
+
+  # Create config file
   file { '/etc/ssh/sshd_config':
     owner   => 'root',
     group   => 'root',

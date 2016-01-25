@@ -103,7 +103,7 @@ See project page at https://github.com/mtulio/puppet-mod-ssh
 [1.3.0]
 * Add Allow/Deny users and groups
 
-[1.2.1]
+[1.2.1] <--
 * Fix metadata dependences
 
 [1.2.0]
