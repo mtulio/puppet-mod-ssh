@@ -53,6 +53,32 @@ SyslogFacility AUTHPRIV
 <% if @permitrootlogin -%>
 PermitRootLogin <%= @permitrootlogin %>
 <% end -%>
+
+
+## The allow/deny directives are processed in the following order:
+## 	DenyUsers, AllowUsers, DenyGroups, and AllowGroups
+
+# DenyUsers
+<% if @deny_users_arr -%>
+DenyUsers <%= @deny_users_arr %>
+<% end -%>
+
+# AllowUsers
+<% if @allow_users_arr -%>
+AllowUsers <%= @allow_users_arr %>
+<% end -%>
+
+# DenyGroups
+<% if @deny_groups_arr -%>
+DenyGroups <%= @deny_groups_arr %>
+<% end -%>
+
+# AllowGroups
+<% if @allow_groups_arr -%>
+AllowGroups <%= @allow_groups_arr %>
+<% end -%>
+
+
 #StrictModes yes
 #MaxAuthTries 6
 #MaxSessions 10

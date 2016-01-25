@@ -100,6 +100,12 @@ See project page at https://github.com/mtulio/puppet-mod-ssh
 
 ## 7. Release Notes
 
+[1.3.0]
+* Add Allow/Deny users and groups
+
+[1.2.0]
+* Set SSHD banner
+
 [1.1.0]
 * Changing global parameter of sshd_config template:
 >> from: 
@@ -113,9 +119,6 @@ GSSAPIAuthentication no
 GSSAPICleanupCredentials yes
 
 ```
-
-[1.2.0]
-* Set SSHD banner
 
 [1.0.1] 
 * Review document description
