@@ -103,8 +103,11 @@ See project page at https://github.com/mtulio/puppet-mod-ssh
 [1.3.0]
 * Add Allow/Deny users and groups
 
+[1.2.1]
+* Fix metadata dependences
+
 [1.2.0]
-* Set SSHD banner
+* Add 'banner' support to template config file - sshd_conf
 
 [1.1.0]
 * Changing global parameter of sshd_config template:
